@@ -1,6 +1,6 @@
 class HaikuController < ApplicationController
 
-	def main
+	def index
 	end
 
 	def new
