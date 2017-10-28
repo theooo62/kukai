@@ -5,4 +5,8 @@ class HaikuController < ApplicationController
 
 	def new
 	end
+
+	def create
+		Tweet.create(name: params[:name], haiku: params[:image] )
+	end
 end
