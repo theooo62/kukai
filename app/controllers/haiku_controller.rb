@@ -7,7 +7,14 @@ class HaikuController < ApplicationController
 	def new
 	end
 
-	# def create
-	# 	Haiku.create(name: params[:name], haiku: params[:haiku])
-	# end
+	def create
+		Haiku.create(haiku_params)
+
+	end
+
+	private
+	def haiku_params
+		params.permit(:name, :haiku)
+	end
+
 end
