@@ -1,3 +1,10 @@
-<%= @haikus.name %>
+<div class="contents">
 
-each文で回す！
+	<% @haikus.each do |ku|%>
+		<div class="contents_" for="">
+		<p><%= ku.name %></p>
+		<div class="contents_main" for="">
+		<p><%= ku.haiku %></p>
+	<% end %>
+
+</div>
