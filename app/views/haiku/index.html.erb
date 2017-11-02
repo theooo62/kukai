@@ -1,10 +1,24 @@
-<div class="contents">
+<table  border="1">
 
-	<% @haikus.each do |ku|%>
-		<div class="contents_" for="">
-		<p><%= ku.name %></p>
-		<div class="contents_main" for="">
-		<p><%= ku.haiku %></p>
-	<% end %>
+<!--   <div class="Tategaki"> -->
 
-</div>
+    <div class="field" for="">
+      <tr>
+        <th><p class="Tategaki">No</p></th>
+        <th><p class="Tategaki">評価</p></th>
+        <th><p class="Tategaki">俳句</p></th>
+      </tr>
+
+      <div class="field" for="">
+        <% @haikus.each.with_index(1) do |set, i| %>
+        <tr>
+          <td><p class="Tategaki"><%= "#{i}" %></p></td>
+          <td><p class="Tategaki"><%= "" %></p></td>
+          <td><p class="Tategaki"><%= set.haiku %><p></td>
+        </tr>
+        <% end %>
+
+      </div>
+    </div>
+ <!--  </div> -->
+</table>

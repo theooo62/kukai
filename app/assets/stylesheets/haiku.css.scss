@@ -4,33 +4,44 @@
 
 /* style.sass */
 form {
-  writing-mode: vertical-rl;
-  
-  > .field {
-   width: 80px;
- 
-    > .label {
-      display: block;
-    }
+writing-mode: vertical-rl;
 
-    > .inputfield {
-      writing-mode: initial;
-      transform: rotate(90deg);
-      transform-origin: top left;
 
-      width: 120px;
-      height: 20px;
-      margin-right: -140px;
-    }
-    
-    > button {
-      writing-mode: initial;
-      transform: rotate(90deg);
-      transform-origin: top left;
+> .field {
+border: 1px;
+width: 80px;
 
-      width: 80px;
-      height: 30px;
-      margin-right: -80px;
-    }
-  }
+> .label {
+display: block;
+}
+
+
+> .inputfield {
+writing-mode: initial;
+transform: rotate(90deg);
+transform-origin: top left;
+
+width: 120px;
+height: 20px;
+margin-right: -140px;
+}
+
+> button {
+writing-mode: initial;
+transform: rotate(90deg);
+transform-origin: top left;
+
+width: 80px;
+height: 30px;
+margin-right: -80px;
+}
+}
+}
+
+.Tategaki {
+height:100px;
+writing-mode: tb-rl;
+writing-mode: vertical-rl;
+-webkit-writing-mode: vertical-rl;
+text-orientation: upright;
 }
