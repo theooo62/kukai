@@ -3,15 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* style.sass */
+
 form {
-  writing-mode: vertical-rl;
-  
+writing-mode: vertical-rl;
+
+
   > .field {
-   width: 80px;
- 
+  width: 80px;
+
     > .label {
-      display: block;
+    display: block;
     }
+
+
 
     > .inputfield {
       writing-mode: initial;
