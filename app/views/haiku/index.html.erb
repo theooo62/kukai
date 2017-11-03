@@ -30,8 +30,8 @@
       <tr>
 				<% numbers = 30 %>
         <% while numbers > 0 do %>
-        <% @haikus.each.with_index(1) do |set| %>
-        <td><p class="Tategaki"><%= set.haiku %></p></td> 
+        <% @haikus.shuffle.each do |haiku| %> <!-- controllerで.allでとってきたデータは配列。それをshuffle -->
+        <td><p class="Tategaki"><%= haiku.text %></p></td> 
         <% numbers = numbers - 1 %>
         <% end %>
         <% end %>

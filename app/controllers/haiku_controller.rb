@@ -1,7 +1,7 @@
 class HaikuController < ApplicationController
 
 	def index
-		@haikus = Haiku.all
+		@haikus = Haiku.all #ここでRAND使うとエラーになる。うまく動かない。
 	end
 
 	def new
@@ -14,7 +14,7 @@ class HaikuController < ApplicationController
 
 	private
 	def haiku_params
-		params.permit(:name, :haiku)
+		params.permit(:name, :text)
 	end
 
 end

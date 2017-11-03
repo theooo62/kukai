@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028103258) do
+ActiveRecord::Schema.define(version: 20171103090513) do
 
   create_table "haikus", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.text     "haiku",      limit: 65535
+    t.text     "text",       limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
