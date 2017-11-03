@@ -1,24 +1,42 @@
 <table  border="1">
 
-<!--   <div class="Tategaki"> -->
+  <div class="field" for="">
 
-    <div class="field" for="">
+
+
+    <div class="field-No">
       <tr>
+        <% numbers = 30 %>
+        <% while numbers > 0 do %>
+        <td><p class="Tategaki"><%= numbers %></p></td> 
+        <% numbers = numbers - 1 %>
+        <% end %>
         <th><p class="Tategaki">No</p></th>
+      </tr>
+    </div>
+
+    <div class="field-sen">
+      <tr>
+      <% numbers = 30 %>
+        <% while numbers > 0 do %>
+        <td><p class="Tategaki"><%= "" %></p></td> 
+        <% numbers = numbers - 1 %>
+        <% end %>
         <th><p class="Tategaki">評価</p></th>
+      </tr>
+    </div>
+
+    <div class="field-haikutext">
+      <tr>
+				<% numbers = 30 %>
+        <% while numbers > 0 do %>
+        <% @haikus.each.with_index(1) do |set| %>
+        <td><p class="Tategaki"><%= set.haiku %></p></td> 
+        <% numbers = numbers - 1 %>
+        <% end %>
+        <% end %>
         <th><p class="Tategaki">俳句</p></th>
       </tr>
-
-      <div class="field" for="">
-        <% @haikus.each.with_index(1) do |set, i| %>
-        <tr>
-          <td><p class="Tategaki"><%= "#{i}" %></p></td>
-          <td><p class="Tategaki"><%= "" %></p></td>
-          <td><p class="Tategaki"><%= set.haiku %><p></td>
-        </tr>
-        <% end %>
-
-      </div>
     </div>
- <!--  </div> -->
+  </div>
 </table>
