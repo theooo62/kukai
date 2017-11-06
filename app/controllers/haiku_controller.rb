@@ -1,7 +1,8 @@
 class HaikuController < ApplicationController
 
 	def index
-		@haikus = Haiku.all #ここでRAND使うとエラーになる。うまく動かない。
+		haikus = Haiku.all
+		@haikus_random = haikus.sample(30)
 	end
 
 	def new

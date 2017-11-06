@@ -3,24 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* style.sass */
-form {
+
+.form {
 writing-mode: vertical-rl;
 }
 
 
+
 .Tategaki {
-height:100px;
 writing-mode: tb-rl;
 writing-mode: vertical-rl;
 -webkit-writing-mode: vertical-rl;
 text-orientation: upright;
-}
-
-
-.field-sen {
-  empty-cells: show;
-}
-
-.field-haikutext {
-  color: red;
 }
