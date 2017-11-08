@@ -1,4 +1,7 @@
 class HaikuController < ApplicationController
+
+	# before_action :move_to_main, except: :main
+
 	def main
 	end
 
@@ -20,4 +23,8 @@ class HaikuController < ApplicationController
 		params.permit(:name, :text)
 	end
 
+	# def move_to_main
+	# 	redirect_to action: :main
+	# end
+	
 end
