@@ -1,42 +1,54 @@
+
 <table  border="1">
 
-  <div class="field" for="">
+  <div class="field-no">
+   <tr>
+    <% numbers = 30 %>
+    <% while numbers > 0 do %>
+    <td class="field-no"><p class="Tategaki"><%= numbers %></p></td> 
+    <% numbers = numbers - 1 %>
+    <% end %>
+    <th><p class="Tategaki">No</p></th>
+  </tr>
+</div>
 
 
+<div class="選">
+  <tr>
+    <% numbers = 30 %>
+    <% while numbers > 0 do %>
+    <td class="field-sen"><p class="Tategaki"><%= "" %></p></td> 
+    <% numbers = numbers - 1 %>
+    <% end %>
+    <th><p class="Tategaki">選</p></th>
+  </tr>
+</div>
 
-    <div class="field-No">
-      <tr>
-        <% numbers = 30 %>
-        <% while numbers > 0 do %>
-        <td><p class="Tategaki"><%= numbers %></p></td> 
-        <% numbers = numbers - 1 %>
-        <% end %>
-        <th><p class="Tategaki">No</p></th>
-      </tr>
-    </div>
 
-    <div class="field-sen">
-      <tr>
-      <% numbers = 30 %>
-        <% while numbers > 0 do %>
-        <td><p class="Tategaki"><%= "" %></p></td> 
-        <% numbers = numbers - 1 %>
-        <% end %>
-        <th><p class="Tategaki">評価</p></th>
-      </tr>
-    </div>
+<div class="field-haikutext">
+  <tr>
+   <% numbers = 30 %>
+   <% while numbers > 0 do %>
+   <% @haikus_random.each do |haiku| %>
+   <td class="field-haikutext"><p class="Tategaki"><%= haiku.text %></p></td>
+   <% numbers = numbers - 1 %>
+   <% end %>
+   <% end %>
+   <th><p class="Tategaki">俳句</p></th>
+ </tr>
+</div>
 
-    <div class="field-haikutext">
-      <tr>
-				<% numbers = 30 %>
-        <% while numbers > 0 do %>
-        <% @haikus.each.with_index(1) do |set| %>
-        <td><p class="Tategaki"><%= set.haiku %></p></td> 
-        <% numbers = numbers - 1 %>
-        <% end %>
-        <% end %>
-        <th><p class="Tategaki">俳句</p></th>
-      </tr>
-    </div>
-  </div>
 </table>
+
+
+
+
+
+
+<footer>
+  <div class="戻る">
+    <a class="btn" href="/">メインページへ戻る</a>
+  </div>
+</footer>
+
+
