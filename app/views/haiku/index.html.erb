@@ -2,10 +2,10 @@
 <table  border="1">
 
     <div class="field-no">
-      <tr>
+       <tr>
         <% numbers = 30 %>
         <% while numbers > 0 do %>
-        <td><p class="Tategaki"><%= numbers %></p></td> 
+        <td class="field-no"><p class="Tategaki"><%= numbers %></p></td> 
         <% numbers = numbers - 1 %>
         <% end %>
         <th><p class="Tategaki">No</p></th>
@@ -13,11 +13,11 @@
     </div>
 
 
-    <div class="field-sen">
+    <div class="選">
       <tr>
       <% numbers = 30 %>
         <% while numbers > 0 do %>
-        <td><p class="Tategaki"><%= "" %></p></td> 
+        <td class="field-sen"><p class="Tategaki"><%= "" %></p></td> 
         <% numbers = numbers - 1 %>
         <% end %>
         <th><p class="Tategaki">選</p></th>
@@ -27,10 +27,10 @@
 
     <div class="field-haikutext">
       <tr>
-				<% numbers = 30 %>
+     <% numbers = 30 %>
         <% while numbers > 0 do %>
 	        <% @haikus_random.each do |haiku| %>
-	        	<td><p class="Tategaki"><%= haiku.text %></p></td>
+	        	<td class="field-haikutext"><p class="Tategaki"><%= haiku.text %></p></td>
         	<% numbers = numbers - 1 %>
         	<% end %>
         <% end %>
@@ -39,5 +39,11 @@
     </div>
 
 </table>
+
+<footer>
+<div class="戻る">
+
+</div>
+</footer>
 
 

@@ -1,4 +1,6 @@
 class HaikuController < ApplicationController
+	def main
+	end
 
 	def index
 		haikus = Haiku.all
