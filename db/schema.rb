@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108080357) do
+ActiveRecord::Schema.define(version: 20171108133059) do
 
   create_table "haikus", force: :cascade do |t|
     t.string   "name",       limit: 255
