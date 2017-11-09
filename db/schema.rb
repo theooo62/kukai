@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109101438) do
+ActiveRecord::Schema.define(version: 20171109103116) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "event_id",    limit: 255
+    t.text     "event_title", limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "haikus", force: :cascade do |t|
     t.string   "name",       limit: 255
