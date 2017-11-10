@@ -5,7 +5,7 @@ class CreateEventUsers < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true
 
       t.timestamps
-      
+
     end
   end
 end

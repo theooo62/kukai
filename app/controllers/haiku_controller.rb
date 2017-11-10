@@ -15,8 +15,12 @@ class HaikuController < ApplicationController
 
 	def create
 		Haiku.create(haiku_params)
-
 	end
+
+	def new_event_create
+		
+	end
+
 
 	private
 	def haiku_params
