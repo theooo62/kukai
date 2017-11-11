@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>句会</title>
-	<section class="vertical-rl">
+	<section class="vertical-rl"> <!-- クラス名これでOK? -->
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
@@ -24,7 +24,7 @@
                   <span><%= current_user.id %>
                     <ul class="user__info">
                       <li>
-                        <a href="/users/current_user.id">マイページ</a>
+                        <a href="/users/<%= current_user.id %>">マイページ</a>
                         <%= link_to "ログアウト" , destroy_user_session_path, method: :delete %>
                       </li>
                     </ul>
