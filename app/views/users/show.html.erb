@@ -1,0 +1,8 @@
+<div class="contents row" >
+   <p><%= @users_id %>の投稿一覧</p>
+   <% @haikus.each do |haiku| %>
+     <div class="content_post" >
+       <%= simple_format(haiku.text) %>
+     </div>
+   <% end %>
+ </div>
