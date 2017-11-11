@@ -17,8 +17,14 @@ class HaikuController < ApplicationController
 		Haiku.create(haiku_params)
 	end
 
+	def destroy
+		haiku = Haiku.find(params[:id])
+		if haiku.user_id == current_user.id
+		haiku.destroy
+	end
+	
 	def new_event_create
-		
+
 	end
 
 
