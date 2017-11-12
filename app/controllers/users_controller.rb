@@ -3,4 +3,3 @@ class UsersController < ApplicationController
     @user_id = current_user.user_id
     @haikus = Haiku.where(user_id: current_user.id)
   end
-end

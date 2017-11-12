@@ -21,17 +21,22 @@ class HaikuController < ApplicationController
 		haiku = Haiku.find(params[:id])
 		if haiku.user_id == current_user.id
 		haiku.destroy
-	  end
+		end
 	end
 
 	def edit #イベントページから飛べるように
     @haiku = Haiku.find(params[id])
 	end
 
-	def new_event_create
-
+	def new_event_creates
 	end
 
+	def update
+		haiku = Haiku.find(params[:event_id]) #ここのハッシュはevent_userから考える？
+		if haiku.user_id == current_user.id
+			haiku.update(haiku_params)
+		end
+	end
 
 	private
 	def haiku_params
@@ -40,6 +45,5 @@ class HaikuController < ApplicationController
 
 	def move_to_main
       # redirect_to action: :index unless user_signed_in?
-    end
-
+	end
 end
