@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # post 'haiku' => 'haiku#create' #投稿
   get 'users/:id' => 'users#show' #マイページ
   # get '/event/:event_id/haiku/:id/edit' => 'haiku#edit' 下に書いてるから必要ない
+  post '/event' => 'event#create'
 
   resources :event do
     resources :haiku ,only: [:create, :edit, :update, :destroy]
