@@ -7,7 +7,7 @@ class HaikuController < ApplicationController
 
 	def index
 		haikus = Haiku.all #where句でデータを絞る　evevt_idとか
-		@haikus_random2 = haikus.sample(30)
+		@haikus_random = haikus.sample(30)
 	end
 
 	def new
@@ -22,7 +22,7 @@ class HaikuController < ApplicationController
 	end
 
 	def show #イベントページでの俳句一覧
-		haikus2 = Haiku.where(event_id) #where句でデータを絞る　evevt_idとか
+		haikus2 = Haiku.where(event_id) #where句でデータを絞る
 		@haikus_random2 = haikus2.sample(30)
 	end
 
