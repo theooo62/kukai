@@ -8,21 +8,17 @@
 writing-mode: vertical-rl;
 }
 
-table {
-	width: 90%;
-}
-
 .field-no {
 	height: 100px;
 }
 
-.選 {
-	height: 70px;
+.sen {
+	height: 80px;
 }
 
 .field-haikutext {
 	height: 500px;
-	margin-top: -500px;
+	margin-top: -600px;
 }
 
 .Tategaki {
@@ -30,9 +26,4 @@ writing-mode: tb-rl;
 writing-mode: vertical-rl;
 -webkit-writing-mode: vertical-rl;
 text-orientation: upright;
-}
-
-
-.戻る  {
-margin-top: 80px;
 }
