@@ -13,65 +13,52 @@
 
 <body>
 
-<header class="keycolor">
-	<!-- <nav id="head_nav" style="display: block;"> -->
-		<ul>
-			<li>
-				<a href="/" title="トップページへ">ＨＯＭＥ</a>
-			</li>
-			<li>
-				<a href="/event" title="句会" class="句会(イベント)">句会</a>
-			</li>
-			<li>
-				<a href="/users/:id" title="マイページ">マイページ</a>
-			</li>
-			</a>
-		</li>
-	</ul>
- <!-- </nav> -->
-</header>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
 
+	<header class="keycolor">
+				<ul>
+					<li>
+						<a href="/" title="トップページへ">ＨＯＭＥ</a>
+					</li>
+					<li>
+						<a href="/event" title="句会" class="句会(イベント)">句会</a>
+					</li>
 
+						<% if user_signed_in? %>
+								<div class="login">
+												<li>
+													NO：  <%= current_user.id %> でログイン中
+												</li>
+												<li>
+													<a href="/users/<%= current_user.id %>">マイページ</a>
+												</li>
+												<li>
+													<%= link_to "ログアウト" , destroy_user_session_path, method: :delete %>
+												</li>
+								</div>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-
-
-    <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">⭐️</a></h1>
-
-          <% if user_signed_in? %> <!-- ユーザーがサインインしている場合 -->
-              <div class="user_nav grid-6">
-                  <span><%= current_user.id %>
-                    <ul class="user__info">
-                      <li>
-                        <a href="/users/<%= current_user.id %>">マイページ</a>
-                        <%= link_to "ログアウト" , destroy_user_session_path, method: :delete %>
-                      </li>
-                    </ul>
-                  </span>
-                  <a class="post" href="/haiku/new">投稿する</a>
-              </div>
-          <% else %>
-                <div class="grid-6">
-                    <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-                    <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-                </div>
-          <% end %>
-      </div>
-    </header>
+						<% else %>
+									<div class="login2">
+										<li>
+											<%= link_to "ログイン", new_user_session_path, class: 'post' %>
+										</li>
+										<li>
+											<%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+										<li>
+									</div>
+						<% end %>
+					</ul>
+  </header>
 
 	<%= yield %>
 
-<footer>
+
+		<footer>
       <p>
         Copyright      2017.
       </p>
     </footer>
+
   </body>
-</html>
-
-
-</body>
 </html>

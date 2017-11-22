@@ -1,59 +1,37 @@
 .keycolor {
   background-color:#44617b;
+  height: 60px;
 }
 
-.keycolor li{
-  color: white ;
-  height: 45px;
+.keycolor li , {
   list-style: none ;
   float: left ;
   padding : 10px 50px;
 }
 
-a:link{
-  color: #fff;
-  text-decoration: none;
+.login li , .login2 li {
+  color: #e198b4;
+  list-style: none ;
+  float: right ;
+  padding : 10px 50px;
 }
 
+a:link{
+  color: #ffffff;
+  text-decoration: none;
+}
 a:visited{
-  color:#c7dc68;
+  color: #ffffff;
 }
 a:hover{
   color: #ffec47;
 }
 a:active{
-  color: #99cc00;
-}
-
-.header__bar row li{
-  flort: left;
+  color: #ffffff;
 }
 
 
-
-
-.keycolor li {
-  background-color: #44617b ;
-  color: #fff ;
-  height: 50px;
-  display: block;
-  list-style: none ;
-  float: left ;
-  padding: 10px 50px;
-}
-
-.main{
-  display: block;
-  float: left
-}
-
-li {
-  list-style: none;
-  float: left;
-}
-
-.footer p{
+.footer {
   background-color: #44617b;
-  color: #fff;
-  height:120px ;
+  color: #ffffff;
 }
