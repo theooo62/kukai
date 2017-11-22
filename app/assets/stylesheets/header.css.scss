@@ -1,26 +1,59 @@
-.keycolor{
-  background:#44617b;
-  display: block;
-
+.keycolor {
+  background-color:#44617b;
 }
 
-.blog_title>div{background:url(http://static.tumblr.com/0feit6s/pQso7h1qv/kachou_logo.png) -53px center}
-.block{padding:30px 50px 100px;max-width:500px}
-.day{margin-left:-15px}.tags{margin-right:-15px}
-.block h2{margin:60px 0 0;padding:0;width:100%;text-align:center;letter-spacing:.5em;line-height:1.5}
-.block h2+p{margin-top:50px}
-.block iframe,
-.block img{margin:50px 0;width:100%!important;height:auto!important;max-width:500px}
-.block iframe{min-height:405px}
-.block h3{margin:50px 0 0}
-.block p{margin:10px 0;line-height:1.6}
-.prof p,div
-.amazon{font-size:.9em;
-  line-height:1.5}
+.keycolor li{
+  color: white ;
+  height: 45px;
+  list-style: none ;
+  float: left ;
+  padding : 10px 50px;
+}
 
-  blockquote
-  {margin:50px -15px;
-    padding:20px;
-    background:#fbfaf5;
-    border-radius:5px;
-    -webkit-border-radius:5px;-moz-border-radius:5px}ul.likere{margin:0}div#toshiki_bottom{margin:0 auto;padding:50px;width:70%;max-width:500px;background:#fff}.prof div{margin:0;padding:0 20px}.prof img{float:left;margin:5px 20px 0 0}.prof p{margin-left:100px;text-indent:0;text-align:left}div.books{margin:60px 0 0;padding:0 20px}div.amazon{width:100%}div.amazon:first-child{margin:0 20px 50px 0}.book_img{float:left;margin-right:15px;margin-bottom:15px}.amazon p{margin:10px 0;line-height:1.4;font-weight:400}
+a:link{
+  color: #fff;
+  text-decoration: none;
+}
+
+a:visited{
+  color:#c7dc68;
+}
+a:hover{
+  color: #ffec47;
+}
+a:active{
+  color: #99cc00;
+}
+
+.header__bar row li{
+  flort: left;
+}
+
+
+
+
+.keycolor li {
+  background-color: #44617b ;
+  color: #fff ;
+  height: 50px;
+  display: block;
+  list-style: none ;
+  float: left ;
+  padding: 10px 50px;
+}
+
+.main{
+  display: block;
+  float: left
+}
+
+li {
+  list-style: none;
+  float: left;
+}
+
+.footer p{
+  background-color: #44617b;
+  color: #fff;
+  height:120px ;
+}
