@@ -10,10 +10,12 @@
 
 <h1>句会一覧</h1>
 
-      <div class="event">
-         <% if @events %> <!--eventか空でも動くように -->
+      <div class="event-list">
+         <!-- <% if @events %> -->
            <% @events.each do |event| %>
-           <p><%= event.event_title %></p>
+           <p>
+           <a href="/event/:id"><%= event.event_title %></a>
+           </p>
            <% end %>
          <% end %>
       </div>

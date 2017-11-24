@@ -13,8 +13,16 @@ class HaikuController < ApplicationController
 	def new
 	end
 
+	def create #イベントページで俳句作成
+    Haiku.create(haiku_params)
+  end
 
 	private
+
+	def haiku_params
+		params.permit(:name, :text)
+	end
+	
 	def move_to_main
       redirect_to action: :index unless user_signed_in?
 	end
