@@ -1,18 +1,8 @@
-<!-- eventのindex -->
-
-<class="new-event">
-    <a class="btn" href="/event">新規句会作成</a>
+<div class="contents row">
+  <div class="success">
+    <h3>
+      投稿が完了しました。
+    </h3>
+    <a class="btn" href="/event">句会一覧へ戻る</a>
   </div>
-
-
-  <h1>句会を作成する</h1>
-
-  <div class="kukai-form">
-      <!-- ここからフォーム -->
-      <% if current_user.id %>
-        <%= form_tag('/event' , method: :post) do %>
-          <textarea cols="100" event_title="text" placeholder="句会名" rows="2"></textarea>
-          <input type="submit" value="SENT">
-        <% end %>
-        <% end %>
-    </div>
+</div>
