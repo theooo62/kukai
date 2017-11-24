@@ -1,11 +1,34 @@
-<div class="new_event">
-    <a class="btn" href="/event/new">新規イベント作成</a>
+<!-- eventのindex -->
+<!-- <link rel="stylesheet" href="event.css.scss"> -->
+
+<ul class="new-event">
+  <li>
+    <a href="/event">新規句会作成はこちら</a>
+  </li>
+</ul>
+
+
+  <!-- <h1>句会を作成する</h1>
+
+  <div class="kukai-form">
+      <% if current_user.id %>
+        <%= form_tag('/event' , method: :post) do %>
+          <textarea cols="40" name="event_title" placeholder="句会名" rows="2"></textarea>
+          <input type="submit" value="SENT">
+        <% end %>
+        <% end %>
+  </div> -->
+
+<div class="event-list">
+    <a class="btn" href="/event">句会一覧</a>
   </div>
 
-  <%= form_tag('/event' , method: :post) do %>
-  <h3>
-  イベント作成する
-  </h3>
+<h1>句会一覧</h1>
 
-  <%= "イベント一覧" %>
-  <% end %>
+      <div class="event">
+         <% if @events %> <!--eventか空でも動くように -->
+           <% @events.each do |event| %>
+           <p><%= event.event_title %></p>
+           <% end %>
+         <% end %>
+      </div>

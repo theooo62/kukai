@@ -1,3 +1,27 @@
 // Place all the styles related to the event controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* style.sass */
+.new-event a:link{
+  color: #000000;
+  text-decoration: none;
+}
+
+.new-event a:visited{
+  color: #000000;
+}
+.new-event a:hover{
+  color: #ff1493;
+}
+.new-event a:active{
+  color: #000000;
+}
+
+.event-list{
+  color: #59b9c6;
+}
+
+h1{
+  color: #96514d;
+}
