@@ -21,9 +21,6 @@
 					<li>
 						<a href="/" title="トップページへ">ＨＯＭＥ</a>
 					</li>
-					<li>
-						<a href="/event" title="句会" class="句会(イベント)">句会</a>
-					</li>
 
 						<% if user_signed_in? %>
 								<div class="login">
@@ -35,6 +32,9 @@
 												</li>
 												<li>
 													<%= link_to "ログアウト" , destroy_user_session_path, method: :delete %>
+												</li>
+												<li>
+													<a href="/event" title="句会" class="句会(イベント)">句会</a>
 												</li>
 								</div>
 
