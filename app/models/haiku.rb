@@ -1,4 +1,4 @@
 class Haiku < ActiveRecord::Base
+  belongs_to :event
+  belongs_to :user
 end
-
-#間違えてこっちにカラム名とか書いてた 1028
