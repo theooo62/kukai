@@ -1,29 +1,35 @@
 class HaikuController < ApplicationController
 
-	before_action :move_to_main, except: :main
+	before_action :move_to_top, except: :top
 
-	def main
+	def top
 	end
 
 	def index
-		haikus = Haiku.all #where句でデータを絞る　evevt_idとか
+		@event = Event.find(params[:event_id])
+
+		haikus = Haiku.where(event_id: params[:event_id])
 		@haikus_random = haikus.sample(30)
+
 	end
 
+
 	def new
+		@event = Event.find(params[:event_id])
 	end
 
 	def create #イベントページで俳句作成
     Haiku.create(haiku_params)
   end
 
+
 	private
 
 	def haiku_params
-		params.permit(:name, :text)
+		params.permit(:name, :text).merge(user_id: current_user.id)
 	end
-	
-	def move_to_main
+
+	def move_to_top
       redirect_to action: :index unless user_signed_in?
 	end
 end
