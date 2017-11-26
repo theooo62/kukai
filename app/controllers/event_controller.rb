@@ -5,23 +5,23 @@ class EventController < ApplicationController
   end
 
   def create
-		Event.create(event_params) #ストロングパラメーターじゃなくてもいい？
+		Event.create(event_params)
     # redirect_to "/event/:id"
  	end
 
   # def show #イベントページでの俳句一覧
-	# 	haikus2 = Haiku.where(:id) #where句でデータを絞る
+	# 	haikus2 = Haiku.where(:event_id)
 	# 	@haikus_random2 = haikus2.sample(30)
 	# end
 
-	def destroy　#イベントページから飛べるように！！！！
+	def destroy　
 		haiku = Haiku.find(params[:id])
 		if haiku.user_id == current_user.id
 		haiku.destroy
 		end
 	end
 
-	def edit #イベントページから飛べるように！！！！！
+	def edit
     @haiku = Haiku.find(params[id])
 	end
 
