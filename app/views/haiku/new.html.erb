@@ -1,6 +1,8 @@
 <!-- <form class="vertical-form"> HTMLのformタグ-->
 
 <%= form_tag("/event/#{@event.id}/haiku" , method: :post) do %> <!-- rubyのformタグ。ダブっていると動かない -->
+
+
   <h3>
   投句する
   </h3>
@@ -20,5 +22,6 @@
   </div>
   <% end %>
 
+</div>
 
 <!-- </form>
