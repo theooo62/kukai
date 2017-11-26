@@ -14,7 +14,11 @@
          <!-- <% if @events %> -->
            <% @events.each do |event| %>
            <p>
-           <a href="/event/:id"><%= event.event_title %></a>
+             <%= link_to "#{event.event_title}", "/event/#{event.id}/haiku"%>
+           </p>
+           <p>
+             <a href="/event/:id/haiku">/</a>
+              <%= link_to "この句会に投句する", "/event/#{event.id}/haiku/new"%>
            </p>
            <% end %>
          <% end %>
