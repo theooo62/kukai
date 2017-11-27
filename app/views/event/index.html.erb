@@ -13,8 +13,7 @@
          <!-- <% if @events %> -->
            <% @events.each do |event| %>
            <ul>
-             <li><%= link_to "#{event.event_title}", "/event/#{event.id}/haiku"%></li> 
-             <li><%= link_to "(この句会に投句する)", "/event/#{event.id}/haiku/new"%></li>
+             <li><pre><%= link_to "「#{event.event_title}」", "/event/#{event.id}/haiku"%>    <%= link_to "★この句会に投句する", "/event/#{event.id}/haiku/new"%></pre></li>
            </ul>
            <% end %>
          <% end %>
