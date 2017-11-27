@@ -12,12 +12,10 @@
       <div class="event-list">
          <!-- <% if @events %> -->
            <% @events.each do |event| %>
-           <p>
-             <%= link_to "#{event.event_title}", "/event/#{event.id}/haiku"%>
-           </p>
-           <p>
-              <%= link_to "この句会に投句する", "/event/#{event.id}/haiku/new"%>
-           </p>
+           <ul>
+             <li><%= link_to "#{event.event_title}", "/event/#{event.id}/haiku"%></li> 
+             <li><%= link_to "(この句会に投句する)", "/event/#{event.id}/haiku/new"%></li>
+           </ul>
            <% end %>
          <% end %>
       </div>
