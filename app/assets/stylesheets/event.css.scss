@@ -11,7 +11,7 @@ ul a:link{
   color: #000000;
 }
 .new-event a:hover{
-  color: #ff1493;
+  color: #c97586;
 }
 .new-event a:active{
   color: #000000;
@@ -22,10 +22,20 @@ ul a:link{
   // text-decoration: none;
 }
 
-li{
-  float:left;
+.event-list ul li{
   list-style: none;
+  color: #404040;
+  border-left: solid 6px #c97586;/*左側の線*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  background: whitesmoke;
+  margin-bottom: 5px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-weight: bold;
+  width: 700px;
 }
+
 
 h1{
   color: #96514d;
