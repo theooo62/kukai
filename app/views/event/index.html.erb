@@ -1,11 +1,21 @@
-<div class="new_event">
-    <a class="btn" href="/event/new">新規イベント作成</a>
-  </div>
+<!-- eventのindex -->
+<!-- <link rel="stylesheet" href="event.css.scss"> -->
 
-  <%= form_tag('/event' , method: :post) do %>
-  <h3>
-  イベント作成する
-  </h3>
+<ul class="new-event">
+    <h1><a href="/event/new">新規句会作成はこちら</a></h1>
+<ul>
 
-  <%= "イベント一覧" %>
-  <% end %>
+
+
+<h2>句会一覧</h2>
+
+      <div class="event-list">
+         <!-- <% if @events %> -->
+           <% @events.each do |event| %>
+           <ul>
+             <li><%= link_to "#{event.event_title}", "/event/#{event.id}/haiku"%></li> 
+             <li><%= link_to "(この句会に投句する)", "/event/#{event.id}/haiku/new"%></li>
+           </ul>
+           <% end %>
+         <% end %>
+      </div>

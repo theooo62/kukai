@@ -1,5 +1,6 @@
 .keycolor {
   background-color:#44617b;
+  width: 100%;
   height: 60px;
 }
 
@@ -16,22 +17,26 @@
   padding : 20px 20px;
 }
 
-a:link{
+.keycolor a:link{
   color: #ffffff;
   text-decoration: none;
 }
-a:visited{
+.keycolor a:visited{
   color: #ffffff;
 }
-a:hover{
+.keycolor a:hover{
   color: #ffec47;
 }
-a:active{
+.keycolor a:active{
   color: #ffffff;
 }
 
 
-.footer p{
+footer {
   background-color: #44617b;
   color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
 }
