@@ -8,23 +8,32 @@ form {
 writing-mode: vertical-rl;
 
 
-  > .field {
-  width: 80px;
+
+
+>.haikuinput{
+  margin-top: 50px;
+  width:auto;
+  margin-right: auto;
+  margin-left : auto;
+
+
+
+  > .field1 {
+  width: 100px;
 
     > .label {
     display: block;
+    float:right ;
     }
-
-
 
     > .inputfield {
       writing-mode: initial;
       transform: rotate(90deg);
       transform-origin: top left;
 
-      width: 120px;
+      width: 250px;
       height: 20px;
-      margin-right: -140px;
+      margin-right: -240px;
     }
 
     > button {
@@ -37,4 +46,5 @@ writing-mode: vertical-rl;
       margin-right: -80px;
     }
   }
+ }
 }
