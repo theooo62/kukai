@@ -2,7 +2,9 @@
 <!-- <link rel="stylesheet" href="event.css.scss"> -->
 
   <ul class="new-event">
+    <% if user_signed_in? %>
       <h4><a href="/event/new">新規句会作成はこちら</a></h4>
+    <% end%>
   <ul>
 
   <div class="event-list">
@@ -10,7 +12,7 @@
        <!-- <% if @events %> -->
          <% @events.each do |event| %>
          <ul>
-           <li><pre><%= link_to "「#{event.event_title}」", "/event/#{event.id}/haiku"%>    <%= link_to "★この句会に投句する", "/event/#{event.id}/haiku/new"%></pre></li>
+           <li><pre><%= link_to "「#{event.event_title}」", "/event/#{event.id}/haiku"%>   <% if user_signed_in? %><%= link_to "★この句会に投句する", "/event/#{event.id}/haiku/new"%><% end %></pre></li>
          </ul>
          <% end %>
        <% end %>
