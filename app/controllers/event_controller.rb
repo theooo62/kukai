@@ -6,7 +6,8 @@ class EventController < ApplicationController
 
   def create
 		Event.create(event_params)
-    # redirect_to "/event/:id"
+    redirect_to action: :index
+
  	end
 
 
