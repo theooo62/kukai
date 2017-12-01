@@ -1,8 +1,15 @@
+<!-- マイページ -->
+
 <div class="contents row" >
    <h4>No, <%= @user_id %> の投稿一覧</h4>
    <% @haikus.each do |haiku| %>
+
      <div class="content_post" >
        <ul><%= simple_format(haiku.text) %><ul>
+
+          <li><%= link_to "編集する", "/event/#{haiku.event_id}/haiku/#{haiku.id}/edit"%></li>
+          <li><%= link_to "削除する", "/event/#{haiku.event_id}/haiku/#{haiku.id}",method: :delete %></li>
+　　　　　
      </div>
    <% end %>
  </div>

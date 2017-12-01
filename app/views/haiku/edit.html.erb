@@ -1,0 +1,20 @@
+<div class="haiku-edit">
+  <%= form_tag("/event/#{@event.id}/haiku/#{@haiku.id}", method: :patch) do %>
+  <h4>
+    編集する
+  </h4>
+
+  <div class="haiku-edit">
+
+    <div class="field1">
+      <label class="label" for="haiku">句</label>
+      <textarea id="haiku" name = "text" class="inputfield"><%= @haiku.text %></textarea>
+    </div>
+
+    <div class="field1">
+      <button type="submit" value="SENT">送信</button>
+    </div>
+
+    <% end %>
+  </div>
+</div>
