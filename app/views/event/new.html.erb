@@ -1,16 +1,24 @@
 <!-- eventのindex -->
+<div class="kukai-form">
+<% if user_signed_in? %>
+  <%= form_tag('/event' , method: :post) do %>
 
-  <div class="kukai-form">
-      <!-- ここからフォーム -->
-      <% if user_signed_in? %>
-        <%= form_tag('/event' , method: :post) do %>
-          <h1>句会を作成する</h1>
-          <textarea cols="100" name="event_title" placeholder="句会名" rows="2"></textarea>
-          <input type="submit" value="SENT">
-        <% end %>
-        <% end %>
-    </div>
+  <h3>
+  ★新しい句会を作る
+  </h3>
 
-    <class="">
-        <a class="btn" href="/event">句会一覧へもどる</a>
-      </div>
+<div class="haikuinput">
+
+  <div class="field1">
+    <label class="label" for="haiku">句会名</label>
+    <textarea id="haiku" name = "event_title" class="inputfield" placeholder=""></textarea>
+  </div>
+
+  <div class="field1">
+    <button type="submit" value="SENT">送信</button>
+  </div>
+
+  <% end %>
+  <% end %>
+</div>
+</div>
