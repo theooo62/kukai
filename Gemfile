@@ -49,3 +49,6 @@ group :development do
   gem 'devise'
 end
 
+group :production do
+  gem 'rails_12factor'
+end

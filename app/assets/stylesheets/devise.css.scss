@@ -1,3 +1,5 @@
-form{
-  all: initial　!important;
+.field{
+  all: initial !important;
+  writing-mode: horizontal-tb ;
+  float: left;
 }
