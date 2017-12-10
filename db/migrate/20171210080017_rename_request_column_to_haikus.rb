@@ -1,5 +1,5 @@
 class RenameRequestColumnToHaikus < ActiveRecord::Migration
   def change
-    rename_column :haiku, :request, :text
+    rename_column :haikus, :request, :text
   end
 end
