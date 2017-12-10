@@ -1,6 +1,6 @@
 <!-- <form class="vertical-form"> HTMLのformタグ-->
 
-<%= form_tag("/event/#{@event.id}/haiku" , method: :post) do %> <!-- rubyのformタグ。ダブっていると動かない -->
+<%= form_tag("/event/#{@event.id}/haiku" , class:"test" , method: :post) do %> <!-- rubyのformタグ。ダブっていると動かない -->
 
 
   <h3>

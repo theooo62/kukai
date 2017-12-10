@@ -4,11 +4,12 @@
 
 /* style.sass */
 
+.test {
+  writing-mode: vertical-rl;
+}
+
 form {
-writing-mode: vertical-rl;
-
-
->.haikuinput{
+  >.haikuinput {
   margin-top: 50px;
   width:auto;
   margin-right: auto;
